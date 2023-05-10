@@ -1,3 +1,8 @@
-2023/05/10-09:25:14.628 5940 Reusing MANIFEST /media/abrar/de97cb87-b151-42e1-b159-042adae90174/home/abrar-byte/api-demo/tmp/Default/Local Storage/leveldb/MANIFEST-000001
-2023/05/10-09:25:14.629 5940 Recovering log #3
-2023/05/10-09:25:14.630 5940 Reusing old log /media/abrar/de97cb87-b151-42e1-b159-042adae90174/home/abrar-byte/api-demo/tmp/Default/Local Storage/leveldb/000003.log 
+2023/05/10-10:47:04.835 a6d9 Reusing MANIFEST /media/abrar/de97cb87-b151-42e1-b159-042adae90174/home/abrar-byte/api-demo/tmp/Default/Local Storage/leveldb/MANIFEST-000001
+2023/05/10-10:47:04.836 a6d9 Recovering log #3
+2023/05/10-10:47:04.836 a6d9 Level-0 table #3: started
+2023/05/10-10:47:05.068 a6d9 Level-0 table #3: 12911 bytes OK
+2023/05/10-10:47:05.068 a6d9 Recovering log #4
+2023/05/10-10:47:05.069 a6d9 Reusing old log /media/abrar/de97cb87-b151-42e1-b159-042adae90174/home/abrar-byte/api-demo/tmp/Default/Local Storage/leveldb/000004.log 
+2023/05/10-10:47:05.175 a6d9 Delete type=2 #5
+2023/05/10-10:47:05.175 a6d9 Delete type=0 #3
