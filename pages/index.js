@@ -68,7 +68,7 @@ function Home() {
           resetForm();
         })
         .catch((error) => {
-          console.log("error:", error);
+          alert("Gagal scrap");
           setSubmitting(false);
           resetForm();
         });
@@ -76,7 +76,11 @@ function Home() {
   });
   return (
     <div className="flex justify-center items-center min-h-screen p-10">
-      <div className={`p-4 w-full ${step === 1 ? 'max-w-lg' :'max-w-full'} bg-white rounded-lg 0 shadow-lg sm:p-6 md:p-8`}>
+      <div
+        className={`p-4 w-full ${
+          step === 1 ? "max-w-lg" : "max-w-full"
+        } bg-white rounded-lg 0 shadow-lg sm:p-6 md:p-8`}
+      >
         <form className="space-y-6" onSubmit={formik.handleSubmit}>
           {step === 1 && (
             <>
@@ -171,7 +175,7 @@ function Home() {
               <div className="text-sm text-center font-medium text-gray-500 dark:text-gray-300">
                 Sudah scrap data?
                 <span
-                  onClick={() => setStep(step+1)}
+                  onClick={() => setStep(step + 1)}
                   className="text-red-600 ml-1 hover:text-red-500 cursor-pointer "
                 >
                   Lihat
@@ -265,12 +269,12 @@ function Home() {
         </form>
         {step === 2 && data && (
           <>
-            <button className="text-red-700" onClick={() => setStep(step - 1)}>
+            <button className="text-red-600 mb-5" onClick={() => setStep(step - 1)}>
               Kembali
             </button>
             <div className="relative  overflow-x-auto">
               <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="text-xs text-gray-600 uppercase bg-gray-50 dark:bg-gray-600 dark:text-gray-400">
                   <tr>
                     <th scope="col" className="px-6 py-3">
                       Tanggal
@@ -299,7 +303,7 @@ function Home() {
                   {data?.data?.map((item, idx) => (
                     <tr
                       key={idx}
-                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                      className="bg-white border-b dark:bg-gray-800 dark:border-gray-600"
                     >
                       <th
                         scope="row"
@@ -318,6 +322,14 @@ function Home() {
                 </tbody>
               </table>
             </div>
+          </>
+        )}
+        {step === 2 && !data && (
+          <>
+            <button className="text-red-600 mb-5" onClick={() => setStep(step - 1)}>
+              Kembali
+            </button>
+            <p className="text-2xl font-bold text-red-600 text-center">Data belum ada</p>
           </>
         )}
       </div>
